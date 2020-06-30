@@ -26,7 +26,7 @@ traverse() {
 
     echo "${prefix}${pointer}$child"
     [ -d "$directory/$child" ] &&
-      traverse "$directory/$child" "${prefix}$child_prefix" ||
+      traverse "$directory/$child" "${prefix}$child_prefix"
       file_count=$((file_count + 1))
   done
 }
