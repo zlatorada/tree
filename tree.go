@@ -7,6 +7,7 @@ import (
 	"sort"
 )
 
+//Counter is a structure for counting directories and files
 type Counter struct {
 	dirs  int
 	files int
@@ -15,9 +16,9 @@ type Counter struct {
 func (counter *Counter) index(path string) {
 	stat, _ := os.Stat(path)
 	if stat.IsDir() {
-		counter.dirs += 1
+		counter.dirs ++
 	} else {
-		counter.files += 1
+		counter.files ++
 	}
 }
 
